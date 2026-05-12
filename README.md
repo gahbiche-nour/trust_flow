@@ -274,7 +274,6 @@ docker compose up --build -d
 docker compose exec web python manage.py test api -v 2
 ```
 
-Expected output:
 
 The test suite (6 cases) covers:
 
