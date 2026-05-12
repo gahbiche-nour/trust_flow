@@ -1,0 +1,28 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    
+    environment:
+      # Django
+      - DJANGO_SECRET_KEY=change-me-in-production
+      - DEBUG=True
+      - ALLOWED_HOSTS=localhost 127.0.0.1
+      # Konnect — replace with your real sandbox values
+      - KONNECT_API_KEY=YOUR_SANDBOX_API_KEY_HERE
+      - KONNECT_WALLET_ID=YOUR_WALLET_ID_HERE
+      - KONNECT_WEBHOOK_URL=https://trustflow.tn/api/webhooks/konnect/
+      # Move this here:
+      - DB_PATH=/app/data/db.sqlite3 
+    volumes:
+      # Persist the SQLite database across container restarts
+      - sqlite_data:/app/data
+    restart: unless-stopped
+    command: >
+      sh -c "python manage.py migrate --noinput && 
+             python manage.py shell -c \"from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.filter(username='admin').exists() or User.objects.create_superuser('admin', 'admin@example.com', 'adminpass')\" &&
+             gunicorn trustflow_core.wsgi:application --bind 0.0.0.0:8000"
+
+volumes:
+  sqlite_data:

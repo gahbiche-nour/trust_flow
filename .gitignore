@@ -1,0 +1,15 @@
+# --- SÉCURITÉ ---
+.env
+
+# --- ENVIRONNEMENT PYTHON ---
+venv/
+pyvenv.cfg
+__pycache__/
+*.py[cod]
+
+# --- DJANGO ---
+db.sqlite3
+/static/
+
+# --- ÉDITEUR ---
+.vscode/
