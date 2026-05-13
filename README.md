@@ -223,6 +223,8 @@ DB_PATH=/app/data/db.sqlite3
 ```bash
 git clone [repo_link]
 cd veriflow
+
+git checkout develop
 docker compose up --build
 ```
 
