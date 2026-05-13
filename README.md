@@ -49,9 +49,6 @@ Every decision — block or release — is written to an `AgentAudit` log
 
 ---
 
-## Architecture
-
-<img width="550" height="591" alt="diagram-Page-3 drawio (2)" src="https://github.com/user-attachments/assets/722372e9-2260-4892-9cfb-f3f1329b8b57" />
 
 
 ## Tech Stack
