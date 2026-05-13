@@ -198,7 +198,7 @@ Create a `.env` file at the project root:
 ```env
 # --- DJANGO SETTINGS ---
 DEBUG=True
-DJANGO_SECRET_KEY=votre_cle_secrete_ici # Génére une nouvelle pour la prod
+DJANGO_SECRET_KEY=cle_secrete
 
 # --- KONNECT SETTINGS (Sandbox) ---
 KONNECT_API_KEY= cle_api_konnect
