@@ -35,7 +35,6 @@ When peer-to-peer commerce happens in cash, with strangers, the risks are multip
 ## How It Works — The Agentic Handshake
 
 
-<img width="561" height="741" alt="DIAGRAM drawio" src="https://github.com/user-attachments/assets/ef495ee0-cef7-47d0-a6db-3dc9f951a523" />
 
 
 
